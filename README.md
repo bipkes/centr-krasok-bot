@@ -95,28 +95,12 @@
 Напишите имя и телефон 📞
 
 ---
-
-## 🏗️ Архитектура
-Telegram сообщение
-↓
-Typing Indicator (показываем "печатает...")
-↓
-Антиспам IF (длина сообщения > 1)
-↓
-AI Agent (GPT-4o-mini + System Prompt + Simple Memory)
-↓
-Отправить ответ пользователю
-↓
-Проверка лида IF (содержит "LEAD:"?)
-↓           ↓
-Да           Нет
-↓
-Google Sheets (записать лид)
-↓
-Уведомление менеджеру в Telegram
+### Архитектура
+<img width="488" height="414" alt="image" src="https://github.com/user-attachments/assets/0b6ca7be-3778-4213-99f1-41b220f5ef3d" />
 
 ### Workflow n8n
-[Вставь скриншот workflow сюда]
+<img width="1182" height="403" alt="image" src="https://github.com/user-attachments/assets/70797c94-1340-4e53-ac38-a5c084fe3502" />
+
 
 ---
 
@@ -139,39 +123,6 @@ Google Sheets (записать лид)
 - Не придумывает цены и акции
 - При незнании — предлагает звонок специалиста
 - Не обсуждает темы вне компании
-
----
-
-## 🚀 Как запустить
-
-### 1. Создай Telegram бота
-
-Открой @BotFather в Telegram
-/newbot → введи название и username
-Сохрани BOT_TOKEN
-
-
-### 2. Получи OpenAI API Key
-
-Зарегистрируйся на platform.openai.com
-API Keys → Create new secret key
-Сохрани API_KEY
-
-
-### 3. Настрой n8n
-
-Зарегистрируйся на n8n.cloud
-Создай новый workflow
-Добавь credentials:
-
-Telegram: вставь BOT_TOKEN
-OpenAI: вставь API_KEY
-Google Sheets: авторизуй через OAuth2
-
-
-Собери workflow по схеме выше
-Вставь System Prompt с базой знаний
-Нажми Publish
 
 
 ### 4. Структура Google Sheets
@@ -201,5 +152,7 @@ Google Sheets: авторизуй через OAuth2
 ## 👨‍💻 Автор
 
 Разработано как тестовое задание AI Telegram Bot ассистента для компании «Центр Красок #1».
+Автор: Bek
+Tg @wuuca
 
 **Стек:** n8n · OpenAI · Telegram · Google Sheets
